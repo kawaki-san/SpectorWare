@@ -183,6 +183,19 @@ body {
   .bg-light.scrolled {
     background: var(--bg-panel) !important;
   }
+  .navbar-item,
+  .navbar-link {
+    color: var(--color-text);
+  }
+  .navbar-item:hover {
+    background: none;
+  }
+
+  .navbar-item.has-dropdown:focus .navbar-link,
+  .navbar-item.has-dropdown:hover .navbar-link,
+  .navbar-item.has-dropdown.is-active .navbar-link {
+    background: none;
+  }
   .hero {
     background: var(--bg);
     height: 100vh;
@@ -192,6 +205,7 @@ body {
     color: var(--color-accent);
     font-weight: bold !important;
     text-align: center;
+    text-transform: uppercase;
     padding-top: 15px;
   }
   .tile {
@@ -216,7 +230,7 @@ body {
     background: var(--promo-background-color);
     .promotion-section-title {
       color: var(--promo-color-text);
-      margin-top: 48px;
+
       font-weight: bold;
       border-bottom: 4px double var(--bg-panel);
       text-shadow: 2px 2px 6px var(--feint-background-color);

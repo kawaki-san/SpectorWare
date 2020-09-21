@@ -13620,6 +13620,21 @@ body .bg-light.scrolled {
   background: var(--bg-panel) !important;
 }
 
+body .navbar-item,
+body .navbar-link {
+  color: var(--color-text);
+}
+
+body .navbar-item:hover {
+  background: none;
+}
+
+body .navbar-item.has-dropdown:focus .navbar-link,
+body .navbar-item.has-dropdown:hover .navbar-link,
+body .navbar-item.has-dropdown.is-active .navbar-link {
+  background: none;
+}
+
 body .hero {
   background: var(--bg);
   height: 100vh;
@@ -13630,6 +13645,7 @@ body .section-title {
   color: var(--color-accent);
   font-weight: bold !important;
   text-align: center;
+  text-transform: uppercase;
   padding-top: 15px;
 }
 
@@ -13664,7 +13680,6 @@ body .promotion-section {
 
 body .promotion-section .promotion-section-title {
   color: var(--promo-color-text);
-  margin-top: 48px;
   font-weight: bold;
   border-bottom: 4px double var(--bg-panel);
   text-shadow: 2px 2px 6px var(--feint-background-color);
