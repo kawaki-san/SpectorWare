@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "derived-variables.scss",
+        "initial-variables.sass"
+    ],
+    "names": [],
+    "file": "derived-variables.css"
+}
