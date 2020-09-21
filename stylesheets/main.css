@@ -13524,6 +13524,14 @@ body .navbar-dropdown {
   border-top: 2px solid var(--color-accent);
 }
 
+body .navbar-menu {
+  background: var(--bg-panel) !important;
+}
+
+body .navbar-burger {
+  color: var(--color-text);
+}
+
 body .switch {
   position: relative;
   display: inline-block;

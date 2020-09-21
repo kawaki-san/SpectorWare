@@ -85,6 +85,12 @@ body {
     background-color: var(--bg-panel);
     border-top: 2px solid var(--color-accent);
   }
+  .navbar-menu {
+    background: var(--bg-panel) !important;
+  }
+  .navbar-burger {
+    color: var(--color-text);
+  }
 
   /*Switch start*/
   .switch {
