@@ -13519,6 +13519,11 @@ body {
   /*Switch End*/
 }
 
+body .navbar-dropdown {
+  background-color: var(--bg-panel);
+  border-top: 2px solid var(--color-accent);
+}
+
 body .switch {
   position: relative;
   display: inline-block;

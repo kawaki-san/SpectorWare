@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/bulma-carousel-min.css">
+    <script defer src="/js/carouselscript.js"></script>
     <link rel="stylesheet" href="/assets/lib/fontawesome-5.14.0/css/all.css">
+    <link rel="stylesheet" href="/stylesheets/glide.core.min.css">
+    <link rel="stylesheet" href="/stylesheets/glide.theme.min.css">
     <link rel="stylesheet" href="/stylesheets/main.css">
     <title>SpectorWare - Home</title>
 </head>
@@ -83,21 +85,40 @@
     <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
 
     <section class="hero">
-
         <div class="hero-content">
             <div class="columns is-vcentered">
                 <div class="column is-8">
                     <div class="container">
-                        <!-- Start Carousel -->
-                        <!-- End Carousel -->
+                        <div class="glide">
+                            <div class="glide__track" data-glide-el="track">
+                                <ul class="glide__slides">
+                                    <li class="glide__slide" style="margin: auto;">
+                                        <h1 class="is-size-2" style="width: 80%;">Are you <span
+                                                class="is-size-1">online?</span>
+                                        </h1>
+                                    </li>
+                                    <li class="glide__slide">1</li>
+                                    <li class="glide__slide">2</li>
+                                </ul>
+                            </div>
+                            <div class="glide__arrows" data-glide-el="controls">
+                                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                            </div>
+                            <div class="glide__bullets" data-glide-el="controls[nav]">
+                                <button class="glide__bullet" data-glide-dir="=0"></button>
+                                <button class="glide__bullet" data-glide-dir="=1"></button>
+                                <button class="glide__bullet" data-glide-dir="=2"></button>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
                 <div class="column">
                     <img src="/assets/images/features/hero_image.png" alt="" srcset="">
                 </div>
             </div>
-        </div>
-        <br>
+            <br>
     </section>
 
     <section class="services">
@@ -197,6 +218,11 @@
     </script>
     <!-- Back to top on scroll -->
     <script src="/js/backtotopscroll.js"></script>
+    <!--Carousel -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+        new Glide('.glide').mount()
+    </script>
 
 </body>
 

@@ -81,6 +81,11 @@ html[data-theme="dark"] {
 
 body {
   background-color: var(--bg-color);
+  .navbar-dropdown {
+    background-color: var(--bg-panel);
+    border-top: 2px solid var(--color-accent);
+  }
+
   /*Switch start*/
   .switch {
     position: relative;
