@@ -6,14 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/bulma-carousel-min.css">
+    <link rel="stylesheet" href="/assets/lib/fontawesome-5.14.0/css/all.css">
     <link rel="stylesheet" href="/stylesheets/main.css">
     <title>SpectorWare - Home</title>
 </head>
 
 <body>
     <nav class="navbar is-fixed-top bg-light" role="navigation" aria-label="main navigation">
-
-
         <div class="navbar-brand">
             <a href="/"
                 style="position: absolute; left: 50%; margin-left: -100px; margin-top: 0px; padding: 0; display: flex; align-items: center;">
@@ -81,6 +80,8 @@
             </div>
         </div>
     </nav>
+    <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+
     <section class="hero">
 
         <div class="hero-content">
@@ -185,6 +186,8 @@
             $("nav").toggleClass("scrolled", $(this).scrollTop() > 90);
         });
     </script>
+    <!-- Back to top on scroll -->
+    <script src="/js/backtotopscroll.js"></script>
 
 </body>
 
