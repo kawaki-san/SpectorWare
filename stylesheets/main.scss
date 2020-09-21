@@ -6,7 +6,7 @@
 
 // 2. Set your own initial variables
 // Update blue
-$blue: #72d0eb;
+$blue: #da4357;
 // Add pink and its invert
 $pink: #ffb3b3;
 $pink-invert: #fff;
@@ -52,26 +52,266 @@ $colors: map-merge($colors, $addColors);
 @import "../stylesheets/bulma/bulma";
 @import url("https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css");
 
+html {
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  --bg: url(../assets/images/backgrounds/background.svg);
+  --bg-panel: #f2f7f2;
+  --color-accent: rgb(218, 67, 87);
+  --color-text: #312f2f;
+  --promo-color-text: #f2f7f2;
+  --color-text-feint: rgba(49, 47, 47, 0.08);
+  --btn-hover-bg: #f2f7f2;
+  --bg-color: #ebccd0;
+  --banner-color: #f2f7f2;
+  --feint-background-color: #ebccd0;
+  --promo-background-color: #2b2b2b;
+}
+
+html[data-theme="dark"] {
+  --bg: url(../assets/images/backgrounds/background-dark.png);
+  --bg-panel: #2b2b2b;
+  --color-accent: rgb(218, 67, 87);
+  --color-text: #f2f7f2;
+  --promo-color-text: #312f2f;
+  --bg-color: #2b2b2b;
+  --banner-color: #414141;
+  --promo-background-color: #f2f7f2;
+}
+
 body {
+  background-color: var(--bg-color);
+  /*Switch start*/
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 34px;
+  }
+
+  .switch input {
+    display: none;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-text);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  input:checked + .slider {
+    background-color: var(--color-accent);
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(55px);
+    -ms-transform: translateX(55px);
+    transform: translateX(55px);
+  }
+
+  /*------ ADDED CSS ---------*/
+  .on {
+    display: none;
+  }
+
+  .on,
+  .off {
+    color: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    font-size: 10px;
+    font-family: Verdana, sans-serif;
+  }
+
+  input:checked + .slider .on {
+    display: block;
+  }
+
+  input:checked + .slider .off {
+    display: none;
+  }
+
+  /*--------- END --------*/
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  html.transition,
+  html.transition *,
+  html.transition *:before,
+  html.transition *:after {
+    transition: all 750ms !important;
+    transition-delay: 0 !important;
+  }
+  /*Switch End*/
+
+  .bg-light {
+    transition: 750ms ease;
+    background: none !important;
+  }
+
+  .bg-light.scrolled {
+    background: var(--bg-panel) !important;
+  }
   .hero {
-    background: url(../assets/images/backgrounds/background.svg);
+    background: var(--bg);
     height: 100vh;
   }
   .section-title {
+    padding-bottom: 15px;
+    color: var(--color-accent);
     font-weight: bold !important;
     text-align: center;
-    margin-bottom: 26px;
+    padding-top: 15px;
   }
   .tile {
+    background: var(--bg-color);
     text-align: center;
-  }
-  .service-icon {
-    background: red;
-    width: 135;
-    max-height: auto;
-    align-items: center;
   }
   .tile-container {
     justify-content: center;
+  }
+  .current {
+    color: var(--color-accent);
+    border-top: 5px solid var(--color-accent);
+  }
+  .title {
+    color: var(--color-accent);
+  }
+  .subtitle {
+    color: var(--color-text);
+  }
+  .promotion-section {
+    text-align: center;
+    background: var(--promo-background-color);
+    .promotion-section-title {
+      color: var(--promo-color-text);
+      margin-top: 48px;
+      font-weight: bold;
+      border-bottom: 4px double var(--bg-panel);
+      text-shadow: 2px 2px 6px var(--feint-background-color);
+    }
+    .promotion-section-subtitle {
+      color: var(--promo-color-text);
+
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+  .highlighted-text {
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+  .button-custom {
+    opacity: 0;
+    display: block;
+    width: 180px;
+    text-align: center;
+    background: var(--color-accent) none repeat scroll 0 0;
+    color: var(--btn-hover-bg);
+    outline: none;
+    padding: 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    animation: fadeDown 0.5s forwards;
+    animation-delay: 0.5s;
+  }
+
+  .button-custom:hover {
+    background: var(--btn-hover-bg) none repeat scroll 0 0;
+    color: var(--color-accent);
+  }
+
+  .button-promo {
+    opacity: 0;
+    display: block;
+    width: 180px;
+    text-align: center;
+    background: var(--color-accent) none repeat scroll 0 0;
+    color: var(--btn-hover-bg);
+    outline: none;
+    padding: 15px;
+    text-decoration: none;
+    animation: fadeDown 0.5s forwards;
+    animation-delay: 0.5s;
+    margin-top: 18px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button-promo:hover {
+    background: var(--bg-panel) none repeat scroll 0 0;
+    color: var(--color-text);
+  }
+}
+
+/*animations*/
+@keyframes fadeUp {
+  0% {
+    transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes grow {
+  0% {
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

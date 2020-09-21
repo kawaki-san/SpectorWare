@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -7,68 +7,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/bulma-carousel-min.css">
     <link rel="stylesheet" href="/stylesheets/main.css">
-
     <title>SpectorWare - Home</title>
 </head>
 
 <body>
-    <section class="hero">
-        <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="https://bulma.io">
-                    <img src="/assets/images/logos/logo.svg" width="112" height="28">
-                </a>
+    <nav class="navbar is-fixed-top bg-light" role="navigation" aria-label="main navigation">
 
-                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-                    data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
 
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-start">
+        <div class="navbar-brand">
+            <a href="/"
+                style="position: absolute; left: 50%; margin-left: -100px; margin-top: 0px; padding: 0; display: flex; align-items: center;">
+                <img src="/assets/images/logos/logo.svg" width="48" height="48">
+            </a>
 
-                </div>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
 
-                <div class="navbar-end">
-                    <a class="navbar-item">
-                        Home
-                    </a>
 
-                    <a class="navbar-item">
-                        Domains
-                    </a>
-                    <a class="navbar-item">
-                        Hosting
-                    </a>
+        </div>
 
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
-                            More
-                        </a>
-
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item">
-                                Branding and Development
-                            </a>
-                            <a class="navbar-item">
-                                Build a PC
-                            </a>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <div class="toggle-container v-center">
+                    <label class="switch"><input type="checkbox" id="switch" name="theme">
+                        <div class="slider round">
+                            <span class="on">Dark</span><span class="off">Light</span>
 
                         </div>
-                    </div>
+                    </label>
 
-                    <a class="navbar-item">
-                        Gallery
-                    </a>
-                    <a class="navbar-item">
-                        Contact
-                    </a>
                 </div>
             </div>
-        </nav>
+
+            <div class="navbar-end">
+                <a class="navbar-item current">
+                    Home
+                </a>
+
+                <a class="navbar-item">
+                    Domains
+                </a>
+                <a class="navbar-item">
+                    Hosting
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                            Branding and Development
+                        </a>
+                        <a class="navbar-item">
+                            Build a PC
+                        </a>
+
+                    </div>
+                </div>
+
+                <a class="navbar-item">
+                    Gallery
+                </a>
+                <a class="navbar-item">
+                    Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+    <section class="hero">
+
         <div class="hero-content">
             <div class="columns is-vcentered">
                 <div class="column is-8">
@@ -144,10 +158,33 @@
             </div>
 
         </div>
-
     </section>
+    <section class="promotion-section">
+        <div class="container has-text-centered">
+            <h1 class="is-size-1 promotion-section-title">NEW CUSTOMER?</h1>
+            <h2 class="is-size-2 promotion-section-subtitle"> <span class="highlighted-text">50% OFF</span> For 4 months
+            </h2>
+            <h2 class="is-size-2 promotion-section-subtitle"> Use promocode <span class="highlighted-text">4MON50</span>
+                FOR MONTHLY PACKAGES
+            </h2>
+            <h2 class="is-size-2 promotion-section-subtitle"> Use promocode <span class="highlighted-text">2MONF</span>
+                FOR ANNUAL PACKAGES
+            </h2>
+            <a href="" class="button-promo">Sign Up Now</a>
+        </div>
+    </section>
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Theme toggle-->
+    <script type="text/javascript" src="js/theme-toggle.js"></script>
     <!----BulmaJS--->
     <script src="/js/bulma.js"></script>
+    <!-- Change Navbar bg on scroll -->
+    <script>
+        $(window).scroll(function () {
+            $("nav").toggleClass("scrolled", $(this).scrollTop() > 90);
+        });
+    </script>
 
 </body>
 
