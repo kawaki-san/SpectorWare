@@ -92,30 +92,111 @@
                         <div class="glide">
                             <div class="glide__track" data-glide-el="track">
                                 <ul class="glide__slides">
-                                    <li class="glide__slide" style="margin: auto;">
-                                        <h1 class="is-size-2" style="width: 80%;">Are you <span
-                                                class="is-size-1">online?</span>
-                                        </h1>
+                                    <li class="glide__slide">
+                                        <div class="card">
+                                            <div class="card-content">
+                                                <p class="hero-title is-size-1">
+                                                    Are you <span
+                                                        style="font-size: 4rem; color: #da4357;">online?</span>
+                                                </p>
+                                                <p class="subtitle">
+                                                    Web hosting packages starting from $3.66pm. Migrate or get your
+                                                    website online in just a few clicks.
+                                                </p>
+                                            </div>
+                                            <footer class="card-footer">
+                                                <!--
+                                                <p class="card-footer-item">
+                                                    <span>
+
+                                                    </span>
+                                                </p> -->
+                                                <p class="card-footer-item">
+                                                    <span>
+                                                        <a class="button-custom">Get Started</a>
+                                                    </span>
+                                                </p>
+                                            </footer>
+                                        </div>
                                     </li>
-                                    <li class="glide__slide">1</li>
-                                    <li class="glide__slide">2</li>
+                                    <li class="glide__slide">
+                                        <div class="card">
+                                            <div class="card-content">
+                                                <p class="hero-title is-size-1">
+                                                    Branding and <span class="hero-full-text-dev">development?</span>
+                                                    <span class="hero-short-text-dev">dev?</span>
+                                                </p>
+                                                <p class="subtitle">
+                                                    From graphics designing to website and application development,
+                                                    we’re here to help you establish your brand’s identity as well as
+                                                    you can.
+
+                                                </p>
+                                            </div>
+                                            <footer class="card-footer">
+                                                <!--
+                                                <p class="card-footer-item">
+                                                    <span>
+
+                                                    </span>
+                                                </p> -->
+                                                <p class="card-footer-item">
+                                                    <span>
+                                                        <a class="button-custom">Find out more</a>
+                                                    </span>
+                                                </p>
+                                            </footer>
+                                        </div>
+                                    </li>
+                                    <li class="glide__slide">
+                                        <div class="card">
+                                            <div class="card-content">
+                                                <p class="hero-title is-size-1">
+                                                    Need some <span class="long-hero-title-pc">workstations? </span>
+                                                    <span class="short-hero-title-pc">PCs?</span>
+                                                </p>
+                                                <p class="subtitle">
+                                                    From graphics designing to website and application development,
+                                                    we’re here to help you establish your brand’s identity as well as
+                                                    you can.
+
+                                                </p>
+                                            </div>
+                                            <footer class="card-footer">
+                                                <!--
+                                                <p class="card-footer-item">
+                                                    <span>
+
+                                                    </span>
+                                                </p> -->
+                                                <p class="card-footer-item">
+                                                    <span>
+                                                        <a class="button-custom">Find out more</a>
+                                                    </span>
+                                                </p>
+                                            </footer>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
-                            <div class="glide__arrows" data-glide-el="controls">
-                                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-                                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                            <div class="glide__arrows" data-glide-el="controls" style="margin-left:10%">
+                                <a class="glide__arrow glide__arrow--left" data-glide-dir="<"><i
+                                        class="fas fa-chevron-left"></i></a>
+                                <a class="glide__arrow glide__arrow--right" data-glide-dir=">"><i
+                                        class="fas fa-chevron-right"></i></a>
                             </div>
-                            <div class="glide__bullets" data-glide-el="controls[nav]">
+                            <div class="glide__bullets" data-glide-el="controls[nav]" s>
                                 <button class="glide__bullet" data-glide-dir="=0"></button>
                                 <button class="glide__bullet" data-glide-dir="=1"></button>
                                 <button class="glide__bullet" data-glide-dir="=2"></button>
                             </div>
                         </div>
+
                     </div>
 
                 </div>
                 <div class="column">
-                    <img src="/assets/images/features/hero_image.png" alt="" srcset="">
+                    <img class="hero-feature-image" src="/assets/images/features/hero_image.png" alt="" srcset="">
                 </div>
             </div>
             <br>
@@ -221,7 +302,10 @@
     <!--Carousel -->
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <script>
-        new Glide('.glide').mount()
+        const config = {
+            type: 'carousel',
+        }
+        new Glide('.glide', config).mount()
     </script>
 
 </body>

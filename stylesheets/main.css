@@ -13747,6 +13747,48 @@ body .button-promo:hover {
   color: var(--color-text);
 }
 
+body .glide__arrow {
+  border: none;
+  color: var(--color-text);
+}
+
+body .glide__arrow:hover {
+  border: none;
+  color: var(--color-accent);
+}
+
+body .glide__slide .card {
+  background-color: transparent !important;
+  padding: 20% !important;
+  background-color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  /* -webkit-box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02); */
+  /* box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02); */
+  color: #4a4a4a;
+  max-width: 100%;
+  position: relative;
+}
+
+body .hero-title {
+  color: var(--color-text);
+  font-weight: bold;
+  text-align: center;
+}
+
+body .hero-full-text-dev,
+body .long-hero-title-pc {
+  font-size: 4rem;
+  color: var(--color-accent);
+}
+
+body .hero-short-text-dev,
+body .short-hero-title-pc {
+  display: none;
+  font-size: 4rem;
+  color: var(--color-accent);
+}
+
 /*animations*/
 @-webkit-keyframes fadeUp {
   0% {
@@ -13942,5 +13984,22 @@ body .button-promo:hover {
           animation-fill-mode: both;
   -webkit-animation-name: btnExit;
           animation-name: btnExit;
+}
+
+@media (max-width: 1200px) {
+  .hero-short-text-dev,
+  .short-hero-title-pc {
+    display: inline-block !important;
+  }
+  .hero-full-text-dev,
+  .long-hero-title-pc {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-feature-image {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

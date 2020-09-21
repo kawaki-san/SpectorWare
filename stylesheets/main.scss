@@ -292,6 +292,41 @@ body {
     background: var(--bg-panel) none repeat scroll 0 0;
     color: var(--color-text);
   }
+  .glide__arrow {
+    border: none;
+    color: var(--color-text);
+  }
+  .glide__arrow:hover {
+    border: none;
+    color: var(--color-accent);
+  }
+  .glide__slide .card {
+    background-color: transparent !important;
+    padding: 20% !important;
+    background-color: white;
+    box-shadow: none;
+    /* -webkit-box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02); */
+    /* box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02); */
+    color: #4a4a4a;
+    max-width: 100%;
+    position: relative;
+  }
+  .hero-title {
+    color: var(--color-text);
+    font-weight: bold;
+    text-align: center;
+  }
+  .hero-full-text-dev,
+  .long-hero-title-pc {
+    font-size: 4rem;
+    color: var(--color-accent);
+  }
+  .hero-short-text-dev,
+  .short-hero-title-pc {
+    display: none;
+    font-size: 4rem;
+    color: var(--color-accent);
+  }
 }
 
 /*animations*/
@@ -413,4 +448,20 @@ body {
   animation-duration: 0.25s;
   animation-fill-mode: both;
   animation-name: btnExit;
+}
+@media (max-width: 1200px) {
+  .hero-short-text-dev,
+  .short-hero-title-pc {
+    display: inline-block !important;
+  }
+  .hero-full-text-dev,
+  .long-hero-title-pc {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-feature-image {
+    display: none;
+  }
 }
