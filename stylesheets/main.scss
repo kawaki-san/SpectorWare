@@ -51,6 +51,7 @@ $colors: map-merge($colors, $addColors);
 // 6. Import the rest of Bulma
 @import "../stylesheets/bulma/bulma";
 @import "../stylesheets/bulma-steps";
+@import "../stylesheets/bulma-pricingtable";
 @import url("https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css");
 
 html {
@@ -352,6 +353,22 @@ body {
   .tile p {
     color: var(--color-text);
   }
+
+  /*Domains Page*/
+  .cloud-hero {
+    background-image: url(../assets/images/backgrounds/header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .page-title-alt {
+    text-transform: uppercase;
+    color: var(--bg-panel);
+    font-weight: bold;
+  }
+  .page-subtitle {
+    font-weight: bold;
+    color: var(--bg-panel);
+  }
 }
 
 /*animations*/
@@ -489,7 +506,4 @@ body {
   .hero-feature-image {
     display: none;
   }
-}
-.domains-hero {
-  background-image: url(../assets/images/backgrounds/cloud-background.jpg);
 }
