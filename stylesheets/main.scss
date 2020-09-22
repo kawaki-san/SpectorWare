@@ -15,7 +15,7 @@ $family-serif: "Inter", sans-serif;
 
 // 3. Set the derived variables
 // Use the new pink as the primary color
-$primary: $pink;
+$primary: $blue;
 $primary-invert: $pink-invert;
 // Use the existing orange as the danger color
 $danger: $orange;
@@ -50,6 +50,7 @@ $colors: map-merge($colors, $addColors);
 
 // 6. Import the rest of Bulma
 @import "../stylesheets/bulma/bulma";
+@import "../stylesheets/bulma-steps";
 @import url("https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css");
 
 html {
@@ -213,7 +214,7 @@ body {
   }
   .section-title {
     padding-bottom: 15px;
-    color: var(--color-accent);
+    color: var(--color-text);
     font-weight: bold !important;
     text-align: center;
     text-transform: uppercase;
@@ -236,6 +237,9 @@ body {
   .subtitle {
     color: var(--color-text);
   }
+  .icon-container {
+    color: var(--color-text);
+  }
   .promotion-section {
     text-align: center;
     background: var(--promo-background-color);
@@ -244,7 +248,8 @@ body {
 
       font-weight: bold;
       border-bottom: 4px double var(--bg-panel);
-      text-shadow: 2px 2px 6px var(--feint-background-color);
+      text-shadow: 0 0.5em 1em -0.125em var(--color-text),
+        0 0px 0 1px rgba(10, 10, 10, 0.02);
     }
     .promotion-section-subtitle {
       color: var(--promo-color-text);
@@ -321,6 +326,13 @@ body {
     color: var(--color-text);
     font-weight: bold;
     text-align: center;
+    opacity: 0;
+    animation: scale 0.5s forwards;
+  }
+  p.hero-subtitle.subtitle {
+    opacity: 0;
+    animation: fadeUp 0.5s forwards;
+    animation-delay: 0.5s;
   }
   .hero-full-text-dev,
   .long-hero-title-pc {
@@ -332,6 +344,13 @@ body {
     display: none;
     font-size: 4rem;
     color: var(--color-accent);
+  }
+  .services {
+    background-color: var(--bg-color);
+  }
+  .steps-content p,
+  .tile p {
+    color: var(--color-text);
   }
 }
 
