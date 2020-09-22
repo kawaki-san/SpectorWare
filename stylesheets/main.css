@@ -15144,4 +15144,8 @@ body .tile p {
     display: none;
   }
 }
+
+.domains-hero {
+  background-image: url(../assets/images/backgrounds/cloud-background.jpg);
+}
 /*# sourceMappingURL=main.css.map */
