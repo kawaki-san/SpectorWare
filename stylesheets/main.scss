@@ -12,7 +12,7 @@ $pink: #ffb3b3;
 $pink-invert: #fff;
 // Add a serif family
 $family-serif: "Inter", sans-serif;
-
+$white-ter: #f2f7f2;
 // 3. Set the derived variables
 // Use the new pink as the primary color
 $primary: $blue;
@@ -49,10 +49,9 @@ $addColors: (
 $colors: map-merge($colors, $addColors);
 
 // 6. Import the rest of Bulma
-@import "../stylesheets/bulma/bulma";
+@import "../stylesheets/bulma/bulma.sass";
 @import "../stylesheets/bulma-steps";
 @import "../stylesheets/bulma-pricingtable";
-@import url("https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css");
 
 html {
   height: 100%;
@@ -369,102 +368,105 @@ body {
     font-weight: bold;
     color: var(--bg-panel);
   }
-}
 
-/*animations*/
-@keyframes fadeUp {
-  0% {
-    transform: translateY(4rem);
+  /*animations*/
+  @keyframes fadeUp {
+    0% {
+      transform: translateY(4rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-@keyframes scale {
-  0% {
-    transform: scale(2);
+  @keyframes scale {
+    0% {
+      transform: scale(2);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 
-@keyframes grow {
-  0% {
-    width: 0;
+  @keyframes grow {
+    0% {
+      width: 0;
+    }
+    100% {
+      opacity: 1;
+      width: 100%;
+    }
   }
-  100% {
-    opacity: 1;
-    width: 100%;
-  }
-}
 
-@keyframes fadeDown {
-  0% {
-    transform: translateY(-1rem);
+  @keyframes fadeDown {
+    0% {
+      transform: translateY(-1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-/*******************/
-#back-to-top-btn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-size: 26px;
-  width: 50px;
-  height: 50px;
-  background-color: var(--bg-color);
-  color: var(--color-text);
-  cursor: pointer;
-  outline: none;
-  border: 1px solid #333;
-  border-radius: 50%;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-property: background-color, color;
-}
-#back-to-top-btn:hover,
-#back-to-top-btn:focus {
-  background-color: var(--color-accent);
-  border: 1px solid var(--banner-color);
-  color: #fff;
-}
-
-@media (max-width: 992px) {
+  /*******************/
   #back-to-top-btn {
-    font-size: 22px;
-    width: 40px;
-    height: 40px;
-    bottom: 15px;
-    right: 15px;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--bg-color);
+    color: var(--color-text);
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #333;
+    border-radius: 50%;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
   }
-}
-@media (max-width: 768px) {
-  #back-to-top-btn {
-    font-size: 18px;
-    width: 32px;
-    height: 32px;
-    bottom: 6px;
-    right: 6px;
+  #back-to-top-btn:hover,
+  #back-to-top-btn:focus {
+    background-color: var(--color-accent);
+    border: 1px solid var(--banner-color);
+    color: #fff;
   }
-}
 
-/* Animations */
-.btnEntrance {
-  animation-duration: 0.5s;
-  animation-fill-mode: both;
-  animation-name: btnEntrance;
-}
-/* zoomIn */
-/* @keyframes btnEntrance { 
+  .knowledge-base-section {
+    background-color: var(--bg-panel);
+  }
+
+  @media (max-width: 992px) {
+    #back-to-top-btn {
+      font-size: 22px;
+      width: 40px;
+      height: 40px;
+      bottom: 15px;
+      right: 15px;
+    }
+  }
+  @media (max-width: 768px) {
+    #back-to-top-btn {
+      font-size: 18px;
+      width: 32px;
+      height: 32px;
+      bottom: 6px;
+      right: 6px;
+    }
+  }
+
+  /* Animations */
+  .btnEntrance {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: btnEntrance;
+  }
+  /* zoomIn */
+  /* @keyframes btnEntrance { 
   from {
     opacity: 0;
     transform: scale3d(0.3, 0.3, 0.3);
@@ -474,36 +476,37 @@ body {
   }    
 } */
 
-/* fadeInUp */
-@keyframes btnEntrance {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
+  /* fadeInUp */
+  @keyframes btnEntrance {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
   }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
 
-.btnExit {
-  animation-duration: 0.25s;
-  animation-fill-mode: both;
-  animation-name: btnExit;
-}
-@media (max-width: 1200px) {
-  .hero-short-text-dev,
-  .short-hero-title-pc {
-    display: inline-block !important;
+  .btnExit {
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    animation-name: btnExit;
   }
-  .hero-full-text-dev,
-  .long-hero-title-pc {
-    display: none;
+  @media (max-width: 1200px) {
+    .hero-short-text-dev,
+    .short-hero-title-pc {
+      display: inline-block !important;
+    }
+    .hero-full-text-dev,
+    .long-hero-title-pc {
+      display: none;
+    }
   }
-}
 
-@media (max-width: 768px) {
-  .hero-feature-image {
-    display: none;
+  @media (max-width: 768px) {
+    .hero-feature-image {
+      display: none;
+    }
   }
 }
