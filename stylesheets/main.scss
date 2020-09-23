@@ -50,8 +50,6 @@ $colors: map-merge($colors, $addColors);
 
 // 6. Import the rest of Bulma
 @import "../stylesheets/bulma/bulma.sass";
-@import "../stylesheets/bulma-steps";
-@import "../stylesheets/bulma-pricingtable";
 
 html {
   height: 100%;
@@ -67,6 +65,7 @@ html {
   --banner-color: #f2f7f2;
   --feint-background-color: #ebccd0;
   --promo-background-color: #2b2b2b;
+  --lighter-background-color: #ebe9e9;
 }
 
 html[data-theme="dark"] {
@@ -78,6 +77,7 @@ html[data-theme="dark"] {
   --bg-color: #2b2b2b;
   --banner-color: #414141;
   --promo-background-color: #f2f7f2;
+  --lighter-background-color: #313131;
 }
 
 body {
@@ -435,7 +435,16 @@ body {
     border: 1px solid var(--banner-color);
     color: #fff;
   }
-
+  .pricing-table .pricing-plan.is-link .plan-footer .button,
+  .pricing-table .pricing-plan.is-link .plan-footer .button:hover {
+    background-color: #00d1b2;
+  }
+  .pricing-table .pricing-plan.is-link .plan-price .plan-price-amount {
+    color: #00d1b2;
+  }
+  .featuring-footer {
+    background-color: var(--lighter-background-color);
+  }
   .knowledge-base-section {
     background-color: var(--bg-panel);
   }
