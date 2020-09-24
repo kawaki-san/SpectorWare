@@ -1,26 +1,25 @@
 @font-face {
-  font-family: "icomoon";
-  src: url("fonts/icomoon.eot?swootl");
-  src: url("fonts/icomoon.eot?swootl#iefix") format("embedded-opentype"),
-    url("fonts/icomoon.ttf?swootl") format("truetype"),
-    url("fonts/icomoon.woff?swootl") format("woff"),
-    url("fonts/icomoon.svg?swootl#icomoon") format("svg");
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?clhnm1');
+  src:  url('fonts/icomoon.eot?clhnm1#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?clhnm1') format('truetype'),
+    url('fonts/icomoon.woff?clhnm1') format('woff'),
+    url('fonts/icomoon.svg?clhnm1#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
+  font-family: 'icomoon' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
+  
   /* Enable Ligatures ================ */
   letter-spacing: 0;
   -webkit-font-feature-settings: "liga";
@@ -38,17 +37,26 @@
 
 .icon-logo-pic .path1:before {
   content: "\e931";
-  color: #d3d3d3;
+  color: rgb(53, 53, 53);
 }
 .icon-logo-pic .path2:before {
   content: "\e932";
   margin-left: -1em;
-  color: #2b2b2b;
+  color: rgb(93, 93, 93);
 }
 .icon-logo-pic .path3:before {
   content: "\e933";
   margin-left: -1em;
-  color: #d3d3d3;
+  color: rgb(61, 61, 61);
+}
+.icon-phone:before {
+  content: "\e934";
+}
+.icon-www:before {
+  content: "\e935";
+}
+.icon-laptop:before {
+  content: "\e936";
 }
 .icon-hd:before {
   content: "\e92d";
@@ -113,7 +121,7 @@
   content: "\e916";
   margin-left: -1em;
   color: rgb(62, 59, 67);
-  opacity: 0.07;
+  opacity: 0.0700;
 }
 .icon-buildpc .path11:before {
   content: "\e917";
@@ -279,6 +287,9 @@
 }
 .icon-icon-ssd:before {
   content: "\e901";
+}
+.icon-mobile2:before {
+  content: "\e959";
 }
 .icon-icon-code:before {
   content: "\ea80";

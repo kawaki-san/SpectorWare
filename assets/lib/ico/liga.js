@@ -25,6 +25,8 @@
     var icons;
     if (!supportsProperty('fontFeatureSettings')) {
         icons = {
+            'mobile2': '&#xe959;',
+            'cell-phone2': '&#xe959;',
             'embed2': '&#xea80;',
             'code2': '&#xea80;',
           '0': 0
