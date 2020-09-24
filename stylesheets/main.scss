@@ -448,6 +448,20 @@ body {
   .knowledge-base-section {
     background-color: var(--bg-panel);
   }
+  .icon-ad,
+  .icon-k,
+  .icon-hd,
+  .icon-k1 {
+    color: var(--bg-panel);
+    font-size: 50px;
+  }
+  .play-icon,
+  .branding-desc {
+    color: var(--bg-panel);
+  }
+  .logo-icon {
+    font-size: 110px;
+  }
 
   @media (max-width: 992px) {
     #back-to-top-btn {

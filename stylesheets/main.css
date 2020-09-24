@@ -13992,6 +13992,23 @@ body .knowledge-base-section {
   background-color: var(--bg-panel);
 }
 
+body .icon-ad,
+body .icon-k,
+body .icon-hd,
+body .icon-k1 {
+  color: var(--bg-panel);
+  font-size: 50px;
+}
+
+body .play-icon,
+body .branding-desc {
+  color: var(--bg-panel);
+}
+
+body .logo-icon {
+  font-size: 110px;
+}
+
 @media (max-width: 992px) {
   body #back-to-top-btn {
     font-size: 22px;
