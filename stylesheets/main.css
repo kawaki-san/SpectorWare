@@ -15133,6 +15133,28 @@ body .page-subtitle-alt {
   color: var(--color-accent);
 }
 
+body .gallery-section h1 {
+  margin: 2em;
+}
+
+body .gallery-section .pswp__caption__center {
+  text-align: center;
+}
+
+body .gallery-section figure {
+  display: inline-block;
+  width: 33.333%;
+  float: left;
+}
+
+body .gallery-section img {
+  width: 100%;
+}
+
+body .gallery-section .spacer {
+  height: 5em;
+}
+
 @media (max-width: 992px) {
   body #back-to-top-btn {
     font-size: 22px;

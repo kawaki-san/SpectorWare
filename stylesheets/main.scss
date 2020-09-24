@@ -473,6 +473,25 @@ body {
   .page-subtitle-alt {
     color: var(--color-accent);
   }
+  .gallery-section {
+    h1 {
+      margin: 2em;
+    }
+    .pswp__caption__center {
+      text-align: center;
+    }
+    figure {
+      display: inline-block;
+      width: 33.333%;
+      float: left;
+    }
+    img {
+      width: 100%;
+    }
+    .spacer {
+      height: 5em;
+    }
+  }
 
   @media (max-width: 992px) {
     #back-to-top-btn {
