@@ -82,6 +82,53 @@
         </div>
     </nav>
     <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+    <div class="chat-widget">
+        <div class="floating-chat">
+            <i class="fas fa-comments" aria-hidden="true"></i>
+            <div class="chat">
+                <div class="chat-header">
+                    <span class="titles" style="color: #da4357; font-weight: bold; text-transform: uppercase;">Leave us
+                        a message</span>
+                    <button class="delete" style="float: right;"></button>
+                </div>
+                <div class="chat-body">
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="name" placeholder="Name">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="email" placeholder="Email">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="name" placeholder="Subject">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-heading"></i>
+                            </span>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <textarea class="textarea has-fixed-size" placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="chat-footer" style="align-items: center;">
+                        <button class="button is-primary" style="width: 100%;">Send</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <section class="cloud-hero">
         <div class="cloud-hero-content">
@@ -217,6 +264,8 @@
             window.open("https://spectorware.com/whmcs/cart.php?a=add&domain=register&query=" + url);
         }   
     </script>
+    <script src="/js/floatingchat.js"></script>
+
 </body>
 
 </html>
