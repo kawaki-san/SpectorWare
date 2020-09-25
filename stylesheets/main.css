@@ -14607,6 +14607,7 @@ html {
   --feint-background-color: #ebccd0;
   --promo-background-color: #2b2b2b;
   --lighter-background-color: #ebe9e9;
+  --card-background: #ffffff;
 }
 
 html[data-theme="dark"] {
@@ -14619,6 +14620,7 @@ html[data-theme="dark"] {
   --banner-color: #414141;
   --promo-background-color: #f2f7f2;
   --lighter-background-color: #313131;
+  --card-background: #313131;
 }
 
 body {
@@ -15408,5 +15410,43 @@ body .chat-widget .floating-chat ::placeholder {
   100% {
     margin-right: 0;
   }
+}
+
+body .contact-us-section {
+  background-color: var(--bg-color);
+}
+
+body .contact-us-section .contact-form .card {
+  padding: 3%;
+}
+
+body .contact-us-section .card {
+  background: var(--card-background);
+}
+
+body .contact-us-section ::-webkit-input-placeholder,
+body .contact-us-section .field label {
+  color: var(--color-text);
+}
+
+body .contact-us-section :-ms-input-placeholder,
+body .contact-us-section .field label {
+  color: var(--color-text);
+}
+
+body .contact-us-section ::-ms-input-placeholder,
+body .contact-us-section .field label {
+  color: var(--color-text);
+}
+
+body .contact-us-section ::placeholder,
+body .contact-us-section .field label {
+  color: var(--color-text);
+}
+
+body .contact-us-section input,
+body .contact-us-section .textarea {
+  background: transparent;
+  color: var(--color-text);
 }
 /*# sourceMappingURL=main.css.map */
