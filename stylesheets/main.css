@@ -15158,6 +15158,23 @@ body .gallery-section .spacer {
   height: 5em;
 }
 
+body .footer {
+  background-color: var(--bg-panel);
+}
+
+body .footer li {
+  list-style: none;
+}
+
+body .footer li a {
+  color: var(--color-text);
+}
+
+body .footer strong,
+body .footer p {
+  color: var(--color-text);
+}
+
 @media (max-width: 992px) {
   body #back-to-top-btn {
     font-size: 22px;

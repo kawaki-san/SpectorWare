@@ -495,6 +495,19 @@ body {
       height: 5em;
     }
   }
+  .footer {
+    background-color: var(--bg-panel);
+    li {
+      list-style: none;
+      a {
+        color: var(--color-text);
+      }
+    }
+    strong,
+    p {
+      color: var(--color-text);
+    }
+  }
 
   @media (max-width: 992px) {
     #back-to-top-btn {
