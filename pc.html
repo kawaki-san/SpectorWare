@@ -5,18 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/lib/ico/style.css">
-    <link rel="stylesheet" href="/assets/lib/fontawesome-5.14.0/css/all.css">
-    <link rel="stylesheet" href="/assets/lib/aos/aos.css">
-    <link rel="stylesheet" href="/stylesheets/bulma-pricingtable.min.css">
-    <link rel="stylesheet" href="/assets/lib/photoswipe/photoswipe.css">
-    <link rel="stylesheet" href="/assets/lib/photoswipe/default-skin/default-skin.css">
-    <link rel="stylesheet" href="/assets/lib/photoswipe/photoswipe.css" />
-    <script src="/assets/lib/photoswipe/photoswipe.min.js"></script>
-    <script src="/assets/lib/photoswipe/photoswipe-ui-default.js"></script>
+    <link rel="stylesheet" href="assets/lib/ico/style.css">
+    <link rel="stylesheet" href="assets/lib/fontawesome-5.14.0/css/all.css">
+    <link rel="stylesheet" href="assets/lib/aos/aos.css">
+    <link rel="stylesheet" href="stylesheets/bulma-pricingtable.min.css">
+    <link rel="stylesheet" href="assets/lib/photoswipe/photoswipe.css">
+    <link rel="stylesheet" href="assets/lib/photoswipe/default-skin/default-skin.css">
+    <link rel="stylesheet" href="assets/lib/photoswipe/photoswipe.css" />
+    <script src="assets/lib/photoswipe/photoswipe.min.js"></script>
+    <script src="assets/lib/photoswipe/photoswipe-ui-default.js"></script>
 
-    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="stylesheets/main.css">
     <title>SpectorWare - Computers</title>
+    <link rel="icon" href="assets/images/logos/logo.svg" />
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
 <body>
@@ -24,7 +27,7 @@
         <div class="navbar-brand">
             <a class="clickable-item" href="/"
                 style="position: absolute; left: 50%; margin-left: -100px; margin-top: 0px; padding: 0; display: flex; align-items: center;">
-                <img src="/assets/images/logos/logo.svg" width="48" height="48">
+                <img src="assets/images/logos/logo.svg" width="48" height="48">
             </a>
 
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
@@ -52,14 +55,14 @@
             </div>
 
             <div class="navbar-end">
-                <a class="navbar-item clickable-item" href="/index.html">
+                <a class="navbar-item clickable-item" href="index.html">
                     Home
                 </a>
 
-                <a class="navbar-item clickable-item" href="/domains.html">
+                <a class="navbar-item clickable-item" href="domains.html">
                     Domains
                 </a>
-                <a class="navbar-item clickable-item" href="/hosting.html">
+                <a class="navbar-item clickable-item" href="hosting.html">
                     Hosting
                 </a>
 
@@ -69,10 +72,10 @@
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item clickable-item" href="/development.html">
+                        <a class="navbar-item clickable-item" href="development.html">
                             Branding and Development
                         </a>
-                        <a class="navbar-item clickable-item" href="/pc.html">
+                        <a class="navbar-item clickable-item" href="pc.html">
                             Build a PC
                         </a>
 
@@ -82,7 +85,7 @@
                 <a class="navbar-item clickable-item" href="https://spectorware.com/whmcs">
                     Client Area
                 </a>
-                <a class="navbar-item clickable-item" href="/contact.html">
+                <a class="navbar-item clickable-item" href="contact.html">
                     Contact
                 </a>
             </div>
@@ -101,14 +104,14 @@
                 <div class="chat-body">
                     <div class="field">
                         <p class="control has-icons-left has-icons-right">
-                            <input class="input" type="text" placeholder="Name">
+                            <input class="input" id="nameText" type="text" placeholder="Name">
                             <span class="icon is-small is-left">
                                 <i class="fas fa-user"></i>
                             </span>
                     </div>
                     <div class="field">
                         <p class="control has-icons-left has-icons-right">
-                            <input class="input" type="email" placeholder="Email">
+                            <input class="input" id="emailText" type="email" placeholder="Email">
                             <span class="icon is-small is-left">
                                 <i class="fas fa-envelope"></i>
                             </span>
@@ -116,14 +119,14 @@
                     </div>
                     <div class="field">
                         <p class="control has-icons-left has-icons-right">
-                            <input class="input" type="name" placeholder="Subject">
+                            <input class="input" id="subjectText" type="name" placeholder="Subject">
                             <span class="icon is-small is-left">
                                 <i class="fas fa-heading"></i>
                             </span>
                     </div>
                     <div class="field">
                         <div class="control">
-                            <textarea class="textarea has-fixed-size" placeholder="Message"></textarea>
+                            <textarea class="textarea has-fixed-size" id="messageText" placeholder="Message"></textarea>
                         </div>
                     </div>
                 </div>
@@ -166,80 +169,75 @@
                             <!-- Use figure for a more semantic html -->
                             <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                                 <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-                                <a href="https://unsplash.it/1200/900/?image=702"
+                                <a href="assets/images/builds/ms-p-3.jpeg"
                                     data-caption="Sea side, south shore<br><em class='text-muted'>© Dominik Schröder</em>"
                                     data-width="1200" data-height="900" itemprop="contentUrl">
                                     <!-- Thumbnail -->
-                                    <img src="https://unsplash.it/400/300/?image=702" itemprop="thumbnail"
+                                    <img src="assets/images/builds/ms-p-3.jpeg" itemprop="thumbnail"
                                         alt="Image description">
                                 </a>
                             </figure>
 
                             <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="https://unsplash.it/1200/900/?image=695"
+                                <a href="assets/images/builds/ms-p-2.jpeg"
                                     data-caption="Sunset in the wheat field<br><em class='text-muted'>© Jordan McQueen</em>"
                                     data-width="1200" data-height="900" itemprop="contentUrl">
-                                    <img src="https://unsplash.it/400/300/?image=695" itemprop="thumbnail"
+                                    <img src="assets/images/builds/ms-p-2.jpeg" itemprop="thumbnail"
                                         alt="Image description">
                                 </a>
                             </figure>
                             <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="https://unsplash.it/1200/900/?image=675"
+                                <a href="assets/images/builds/ms-p-5.jpeg"
                                     data-caption="Mysterious ocean<br><em class='text-muted'>© Barn Images</em>"
                                     data-width="1200" data-height="900" itemprop="contentUrl">
-                                    <img src="https://unsplash.it/400/300/?image=675" itemprop="thumbnail"
+                                    <img src="assets/images/builds/ms-p-5.jpeg" itemprop="thumbnail"
                                         alt="Image description">
                                 </a>
                             </figure>
+                            <!-- Some spacing 😉 -->
+                            <div class="spacer"></div>
                             <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="https://unsplash.it/1200/900/?image=651"
+                                <a href="assets/images/builds/ms-p-6.jpeg"
                                     data-caption="Cloud over the mountains<br><em class='text-muted'>© James Pritchett</em>"
                                     data-width="1200" data-height="900" itemprop="contentUrl">
-                                    <img src="https://unsplash.it/400/300/?image=651" itemprop="thumbnail"
+                                    <img src="assets/images/builds/ms-p-6.jpeg" itemprop="thumbnail"
                                         alt="Image description">
                                 </a>
                             </figure>
                             <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="https://unsplash.it/1200/900/?image=584"
+                                <a href="assets/images/builds/ms-p-9.jpeg"
                                     data-caption="Icelandic horses<br><em class='text-muted'>© Bethany Legg</em>"
                                     data-width="1200" data-height="900" itemprop="contentUrl">
-                                    <img src="https://unsplash.it/400/300/?image=584" itemprop="thumbnail"
+                                    <img src="assets/images/builds/ms-p-9.jpeg" itemprop="thumbnail"
                                         alt="Image description">
                                 </a>
                             </figure>
                             <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="https://unsplash.it/1200/900/?image=574"
+                                <a href="assets/images/builds/ms-p-4.jpeg"
                                     data-caption="Sea side, south shore<br><em class='text-muted'>© Julien Lavallée</em>"
                                     data-width="1200" data-height="900" itemprop="contentUrl">
-                                    <img src="https://unsplash.it/400/300/?image=574" itemprop="thumbnail"
+                                    <img src="assets/images/builds/ms-p-4.jpeg" itemprop="thumbnail"
                                         alt="Image description">
                                 </a>
                             </figure>
+
                             <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="https://unsplash.it/1200/900/?image=551"
-                                    data-caption="Sunset on the highland road<br><em class='text-muted'>© Forrest Cavale</em>"
-                                    data-width="1200" data-height="900" itemprop="contentUrl">
-                                    <img src="https://unsplash.it/400/300/?image=551" itemprop="thumbnail"
-                                        alt="Image description">
-                                </a>
-                            </figure>
-                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="https://unsplash.it/1200/900/?image=509"
+                                <a href="assets/images/builds/ms-p-8.jpeg"
                                     data-caption="Seljalandsfoss waterfall<br><em class='text-muted'>© Jeff Sheldon</em>"
                                     data-width="1200" data-height="900" itemprop="contentUrl">
-                                    <img src="https://unsplash.it/400/300/?image=509" itemprop="thumbnail"
+                                    <img src="assets/images/builds/ms-p-8.jpeg" itemprop="thumbnail"
                                         alt="Image description">
                                 </a>
                             </figure>
                             <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="https://unsplash.it/1200/900/?image=511"
-                                    data-caption="Fjadrarglufur canyon, south shore<br><em class='text-muted'>© Jeff Sheldon</em>"
+                                <a href="assets/images/builds/ms-p-1.jpeg"
+                                    data-caption="Sunset on the highland road<br><em class='text-muted'>© Forrest Cavale</em>"
                                     data-width="1200" data-height="900" itemprop="contentUrl">
-                                    <img src="https://unsplash.it/400/300/?image=511" itemprop="thumbnail"
+                                    <img src="assets/images/builds/ms-p-1.jpeg" itemprop="thumbnail"
                                         alt="Image description">
                                 </a>
                             </figure>
-                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <!--      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                                 <a href="https://unsplash.it/1200/900/?image=515"
                                     data-caption="Eerie wreckage of a crashed U.S. Navy aircraft<br><em class='text-muted'>© Jeff Sheldon</em>"
                                     data-width="1200" data-height="900" itemprop="contentUrl">
@@ -262,7 +260,7 @@
                                     <img src="https://unsplash.it/400/300/?image=514" itemprop="thumbnail"
                                         alt="Image description">
                                 </a>
-                            </figure>
+                            </figure> -->
                         </div>
 
                     </div>
@@ -331,14 +329,14 @@
                         <div class="column">
                             <strong>SpectorWare</strong>
                             <ul>
-                                <li><a href="/index.html">Home</a></li>
+                                <li><a href="index.html">Home</a></li>
                             </ul>
                         </div>
                         <div class="column">
                             <strong>Web Services</strong>
                             <ul>
-                                <li><a href="/domains.html">Domains</a></li>
-                                <li><a href="/hosting.html">Web Hosting</a></li>
+                                <li><a href="domains.html">Domains</a></li>
+                                <li><a href="hosting.html">Web Hosting</a></li>
                                 <li><a href="https://spectorware.com/whmcs">Client Area</a></li>
                                 <li><a href="https://spectorware.com/whmcs/index.php?rp=/knowledgebase">FAQ</a></li>
                             </ul>
@@ -346,14 +344,14 @@
                         <div class="column">
                             <strong>Development</strong>
                             <ul>
-                                <li><a href="/development.html">Branding and Development</a></li>
-                                <li><a href="/pc.html">Order PCs</a></li>
+                                <li><a href="development.html">Branding and Development</a></li>
+                                <li><a href="pc.html">Order PCs</a></li>
                             </ul>
                         </div>
                         <div class="column">
                             <strong>Need help?</strong>
                             <ul>
-                                <li><a href="/contact.html">Contact</a></li>
+                                <li><a href="contact.html">Contact</a></li>
 
                             </ul>
                         </div>
@@ -377,7 +375,7 @@
     <!-- Theme toggle-->
     <script type="text/javascript" src="js/theme-toggle.js"></script>
     <!----BulmaJS--->
-    <script src="/js/bulma.js"></script>
+    <script src="js/bulma.js"></script>
     <!-- Change Navbar bg on scroll -->
     <script>
         $(window).scroll(function () {
@@ -385,8 +383,8 @@
         });
     </script>
     <!-- Back to top on scroll -->
-    <script src="/js/backtotopscroll.js"></script>
-    <script src="/assets/lib/aos/aos.js"></script>
+    <script src="js/backtotopscroll.js"></script>
+    <script src="assets/lib/aos/aos.js"></script>
     <script>
         AOS.init();
     </script>
@@ -443,7 +441,7 @@
         }(jQuery));
 
     </script>
-    <script src="/js/floatingchat.js"></script>
+    <script src="js/floatingchat.js"></script>
 
 </body>
 

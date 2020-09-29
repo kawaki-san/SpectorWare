@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/lib/fontawesome-5.14.0/css/all.css">
-    <link rel="stylesheet" href="/stylesheets/glide.core.min.css">
-    <link rel="stylesheet" href="/stylesheets/glide.theme.min.css">
-    <link rel="stylesheet" href="/assets/lib/aos/aos.css">
-    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="assets/lib/fontawesome-5.14.0/css/all.css">
+    <link rel="stylesheet" href="stylesheets/glide.core.min.css">
+    <link rel="stylesheet" href="stylesheets/glide.theme.min.css">
+    <link rel="stylesheet" href="assets/lib/aos/aos.css">
+    <link rel="stylesheet" href="stylesheets/main.css">
     <title>SpectorWare - Home</title>
+    <link rel="icon" href="assets/images/logos/logo.svg" />
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
 <body>
@@ -18,7 +21,7 @@
         <div class="navbar-brand">
             <a href="/"
                 style="position: absolute; left: 50%; margin-left: -100px; margin-top: 0px; padding: 0; display: flex; align-items: center;">
-                <img src="/assets/images/logos/logo.svg" width="48" height="48">
+                <img src="assets/images/logos/logo.svg" width="48" height="48">
             </a>
 
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
@@ -30,7 +33,7 @@
         </div>
 
 
-        </div>
+
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
@@ -50,10 +53,10 @@
                     Home
                 </a>
 
-                <a class="navbar-item" href="/domains.html">
+                <a class="navbar-item" href="domains.html">
                     Domains
                 </a>
-                <a class="navbar-item" href="/hosting.html">
+                <a class="navbar-item" href="hosting.html">
                     Hosting
                 </a>
 
@@ -63,10 +66,10 @@
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="/development.html">
+                        <a class="navbar-item" href="development.html">
                             Branding and Development
                         </a>
-                        <a class="navbar-item" href="/pc.html">
+                        <a class="navbar-item" href="pc.html">
                             Build a PC
                         </a>
 
@@ -76,7 +79,7 @@
                 <a class="navbar-item" href="https://spectorware.com/whmcs">
                     Client Area
                 </a>
-                <a class="navbar-item" href="/contact.html">
+                <a class="navbar-item" href="contact.html">
                     Contact
                 </a>
             </div>
@@ -86,50 +89,55 @@
     <div class="chat-widget">
         <div class="floating-chat">
             <i class="fas fa-comments" aria-hidden="true"></i>
-            <div class="chat">
-                <div class="chat-header">
-                    <span class="titles" style="color: #da4357; font-weight: bold; text-transform: uppercase;">Leave us
-                        a message</span>
-                    <button class="delete" style="float: right;"></button>
-                </div>
-                <div class="chat-body">
-                    <div class="field">
-                        <p class="control has-icons-left has-icons-right">
-                            <input class="input" type="text" placeholder="Name">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-user"></i>
-                            </span>
+            <form id="reused_form">
+                <div class="chat">
+                    <div class="chat-header">
+                        <span class="titles" style="color: #da4357; font-weight: bold; text-transform: uppercase;">Leave
+                            us
+                            a message</span>
+                        <button class="delete" style="float: right;"></button>
                     </div>
-                    <div class="field">
-                        <p class="control has-icons-left has-icons-right">
-                            <input class="input" type="email" placeholder="Email">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-envelope"></i>
-                            </span>
+                    <div class="chat-body">
+                        <div class="field">
+                            <p class="control has-icons-left has-icons-right">
+                                <input class="input" id="nameText" type="text" placeholder="Name">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left has-icons-right">
+                                <input class="input" id="emailText" type="email" placeholder="Email">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
 
-                    </div>
-                    <div class="field">
-                        <p class="control has-icons-left has-icons-right">
-                            <input class="input" type="name" placeholder="Subject">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-heading"></i>
-                            </span>
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            <textarea class="textarea has-fixed-size" placeholder="Message"></textarea>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left has-icons-right">
+                                <input class="input" id="subjectText" type="name" placeholder="Subject">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-heading"></i>
+                                </span>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <textarea class="textarea has-fixed-size" id="messageText"
+                                    placeholder="Message"></textarea>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="field">
-                    <div class="chat-footer" style="align-items: center;">
-                        <button class="button is-primary" style="width: 100%;">Send</button>
+                    <div class="field">
+                        <div class="chat-footer" style="align-items: center;">
+                            <button class="button is-primary" style="width: 100%;">Send</button>
+                        </div>
                     </div>
-                </div>
 
-            </div>
+                </div>
+            </form>
         </div>
     </div>
+
 
     <section class="hero">
         <div class="hero-content">
@@ -244,10 +252,11 @@
 
                 </div>
                 <div class="column">
-                    <img class="hero-feature-image" src="/assets/images/features/hero_image.png" alt="" srcset="">
+                    <img class="hero-feature-image" src="assets/images/features/hero_image.png" alt="" srcset="">
                 </div>
             </div>
             <br>
+        </div>
     </section>
 
     <section class="services">
@@ -265,7 +274,7 @@
                             data-aos-duration="1000">
                             <article class="tile is-child box">
                                 <figure class="image is-4by3">
-                                    <img src="/assets/images/vectors/webhosting.svg">
+                                    <img src="assets/images/vectors/webhosting.svg">
                                 </figure>
                                 <p class="title">Web Hosting</p>
                                 <p class="subtitle">Quick, secure, fast. Have your site up in just a few minutes.</p>
@@ -276,7 +285,7 @@
                             data-aos-duration="900">
                             <article class="tile is-child box">
                                 <figure class="image is-4by3">
-                                    <img src="/assets/images/vectors/branding.svg">
+                                    <img src="assets/images/vectors/branding.svg">
                                 </figure>
                                 <p class="title">Designing and Branding</p>
                                 <p class="subtitle">Establishing your brand's identity? We'll help you get started.</p>
@@ -295,7 +304,7 @@
                             data-aos-duration="1000">
                             <article class="tile is-child box">
                                 <figure class="image is-4by3">
-                                    <img src="/assets/images/vectors/buildpc.svg">
+                                    <img src="assets/images/vectors/buildpc.svg">
                                 </figure>
                                 <p class="title">Get some PCs</p>
                                 <p class="subtitle">Need a workline line of computers? Avid gamer? We've got you covered
@@ -306,7 +315,7 @@
                             data-aos-duration="1000">
                             <article class="tile is-child box">
                                 <figure class="image is-4by3">
-                                    <img src="/assets/images/vectors/development.svg">
+                                    <img src="assets/images/vectors/development.svg">
                                 </figure>
                                 <p class="title">Development</p>
                                 <p class="subtitle">Web, desktop, mobile, you name it. Contact us and let us know what
@@ -432,14 +441,14 @@
                     <div class="column">
                         <strong>SpectorWare</strong>
                         <ul>
-                            <li><a href="/index.html">Home</a></li>
+                            <li><a href="index.html">Home</a></li>
                         </ul>
                     </div>
                     <div class="column">
                         <strong>Web Services</strong>
                         <ul>
-                            <li><a href="/domains.html">Domains</a></li>
-                            <li><a href="/hosting.html">Web Hosting</a></li>
+                            <li><a href="domains.html">Domains</a></li>
+                            <li><a href="hosting.html">Web Hosting</a></li>
                             <li><a href="https://spectorware.com/whmcs">Client Area</a></li>
                             <li><a href="https://spectorware.com/whmcs/index.php?rp=/knowledgebase">FAQ</a></li>
                         </ul>
@@ -447,14 +456,14 @@
                     <div class="column">
                         <strong>Development</strong>
                         <ul>
-                            <li><a href="/development.html">Branding and Development</a></li>
-                            <li><a href="/pc.html">Order PCs</a></li>
+                            <li><a href="development.html">Branding and Development</a></li>
+                            <li><a href="pc.html">Order PCs</a></li>
                         </ul>
                     </div>
                     <div class="column">
                         <strong>Need help?</strong>
                         <ul>
-                            <li><a href="/contact.html">Contact</a></li>
+                            <li><a href="contact.html">Contact</a></li>
 
                         </ul>
                     </div>
@@ -470,12 +479,12 @@
             </p>
         </div>
     </footer>
-    <!-- JQuery -->
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Theme toggle-->
     <script type="text/javascript" src="js/theme-toggle.js"></script>
     <!----BulmaJS--->
-    <script src="/js/bulma.js"></script>
+    <script src="js/bulma.js"></script>
     <!-- Change Navbar bg on scroll -->
     <script>
         $(window).scroll(function () {
@@ -483,7 +492,7 @@
         });
     </script>
     <!-- Back to top on scroll -->
-    <script src="/js/backtotopscroll.js"></script>
+    <script src="js/backtotopscroll.js"></script>
     <!--Carousel -->
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <script>
@@ -493,11 +502,12 @@
         }
         new Glide('.glide', config).mount()
     </script>
-    <script src="/assets/lib/aos/aos.js"></script>
+    <script src="assets/lib/aos/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <script src="/js/floatingchat.js"></script>
+    <script src="js/floatingchat.js"></script>
+    <script src="js/form.js"></script>
 
 </body>
 

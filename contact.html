@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/lib/fontawesome-5.14.0/css/all.css">
-    <link rel="stylesheet" href="/assets/lib/aos/aos.css">
-    <link rel="stylesheet" href="/stylesheets/bulma-pricingtable.min.css">
-    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="assets/lib/fontawesome-5.14.0/css/all.css">
+    <link rel="stylesheet" href="assets/lib/aos/aos.css">
+    <link rel="stylesheet" href="stylesheets/bulma-pricingtable.min.css">
+    <link rel="stylesheet" href="stylesheets/main.css">
     <title>SpectorWare - Contact</title>
+    <link rel="icon" href="assets/images/logos/logo.svg" />
+    <script src="/js/form.js"></script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
 <body>
@@ -17,7 +21,7 @@
         <div class="navbar-brand">
             <a href="/"
                 style="position: absolute; left: 50%; margin-left: -100px; margin-top: 0px; padding: 0; display: flex; align-items: center;">
-                <img src="/assets/images/logos/logo.svg" width="48" height="48">
+                <img src="assets/images/logos/logo.svg" width="48" height="48">
             </a>
 
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
@@ -45,14 +49,14 @@
             </div>
 
             <div class="navbar-end">
-                <a class="navbar-item " href="/index.html">
+                <a class="navbar-item " href="index.html">
                     Home
                 </a>
 
-                <a class="navbar-item" href="/domains.html">
+                <a class="navbar-item" href="domains.html">
                     Domains
                 </a>
-                <a class="navbar-item" href="/hosting.html">
+                <a class="navbar-item" href="hosting.html">
                     Hosting
                 </a>
 
@@ -62,10 +66,10 @@
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="/development.html">
+                        <a class="navbar-item" href="development.html">
                             Branding and Development
                         </a>
-                        <a class="navbar-item" href="/pc.html">
+                        <a class="navbar-item" href="pc.html">
                             Build a PC
                         </a>
 
@@ -140,14 +144,17 @@
                     <p class="subtitle has-text-centered">Feel like contacting us? Submit your queries here and we'll
                         get back
                         to you as soon as possible.</p>
+                    <br>
+                    <p class="subtitle has-text-centered"> <a
+                            href="mailto:support@spectorware.com">support@spectorware.com</a></p>
                 </div>
                 <div class="column is-two-thirds">
                     <div class="contact-form">
-                        <div class="card">
+                        <form class="card" id="reused_form">
                             <div class="field">
                                 <label class="label">Name</label>
                                 <div class="control has-icons-left">
-                                    <input class="input" type="text" placeholder="Name">
+                                    <input class="input" type="text" placeholder="Name" name="name">
                                     <span class="icon is-small is-left">
                                         <i class="fas fa-user"></i>
                                     </span>
@@ -157,7 +164,7 @@
                             <div class="field">
                                 <label class="label">Email</label>
                                 <div class="control has-icons-left has-icons-right">
-                                    <input class="input" type="email" placeholder="Email">
+                                    <input class="input" type="email" placeholder="Email" name="email">
                                     <span class="icon is-small is-left">
                                         <i class="fas fa-envelope"></i>
                                     </span>
@@ -167,7 +174,7 @@
                             <div class="field">
                                 <label class="label">Subject</label>
                                 <div class="control has-icons-left has-icons-right">
-                                    <input class="input" type="text" placeholder="Subject">
+                                    <input class="input" type="text" placeholder="Subject" name="subject">
                                     <span class="icon is-small is-left">
                                         <i class="fas fa-heading"></i>
                                     </span>
@@ -180,7 +187,7 @@
                             <div class="field">
                                 <label class="label">Message</label>
                                 <div class="control">
-                                    <textarea class="textarea" placeholder="Textarea"></textarea>
+                                    <textarea class="textarea" placeholder="Message" name="message"></textarea>
                                 </div>
                             </div>
                             <div class="field is-grouped">
@@ -189,11 +196,21 @@
                                 </div>
 
                             </div>
+                        </form>
+                        <div id="error_message" style="width:100%; height:100%; display:none; ">
+                            <h4>
+                                Error
+                            </h4>
+                            Sorry there was an error sending your form.
+                        </div>
+                        <div id="success_message" style="width:100%; height:100%; display:none; ">
+                            <h2>Success! Your Message was Sent Successfully.</h2>
                         </div>
                     </div>
-
                 </div>
+
             </div>
+        </div>
         </div>
         <br>
     </section>
@@ -207,14 +224,14 @@
                     <div class="column">
                         <strong>SpectorWare</strong>
                         <ul>
-                            <li><a href="/index.html">Home</a></li>
+                            <li><a href="index.html">Home</a></li>
                         </ul>
                     </div>
                     <div class="column">
                         <strong>Web Services</strong>
                         <ul>
-                            <li><a href="/domains.html">Domains</a></li>
-                            <li><a href="/hosting.html">Web Hosting</a></li>
+                            <li><a href="domains.html">Domains</a></li>
+                            <li><a href="hosting.html">Web Hosting</a></li>
                             <li><a href="https://spectorware.com/whmcs">Client Area</a></li>
                             <li><a href="https://spectorware.com/whmcs/index.php?rp=/knowledgebase">FAQ</a></li>
                         </ul>
@@ -222,14 +239,14 @@
                     <div class="column">
                         <strong>Development</strong>
                         <ul>
-                            <li><a href="/development.html">Branding and Development</a></li>
-                            <li><a href="/pc.html">Order PCs</a></li>
+                            <li><a href="development.html">Branding and Development</a></li>
+                            <li><a href="pc.html">Order PCs</a></li>
                         </ul>
                     </div>
                     <div class="column">
                         <strong>Need help?</strong>
                         <ul>
-                            <li><a href="/contact.html">Contact</a></li>
+                            <li><a href="contact.html">Contact</a></li>
 
                         </ul>
                     </div>
@@ -250,7 +267,7 @@
     <!-- Theme toggle-->
     <script type="text/javascript" src="js/theme-toggle.js"></script>
     <!----BulmaJS--->
-    <script src="/js/bulma.js"></script>
+    <script src="js/bulma.js"></script>
     <!-- Change Navbar bg on scroll -->
     <script>
         $(window).scroll(function () {
@@ -258,7 +275,7 @@
         });
     </script>
     <!-- Back to top on scroll -->
-    <script src="/js/backtotopscroll.js"></script>
+    <script src="js/backtotopscroll.js"></script>
     <!--Carousel -->
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <script>
@@ -267,11 +284,12 @@
         }
         new Glide('.glide', config).mount()
     </script>
-    <script src="/assets/lib/aos/aos.js"></script>
+    <script src="assets/lib/aos/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <script src="/js/floatingchat.js"></script>
+    <script src="js/floatingchat.js"></script>
+
 
 </body>
 
