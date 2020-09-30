@@ -1,243 +1,383 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/lib/ico/style.css">
-    <link rel="stylesheet" href="assets/lib/fontawesome-5.14.0/css/all.css">
-    <link rel="stylesheet" href="assets/lib/aos/aos.css">
-    <link rel="stylesheet" href="stylesheets/bulma-pricingtable.min.css">
-    <link rel="stylesheet" href="assets/lib/photoswipe/photoswipe.css">
-    <link rel="stylesheet" href="assets/lib/photoswipe/default-skin/default-skin.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/lib/ico/style.css" />
+    <link rel="stylesheet" href="assets/lib/fontawesome-5.14.0/css/all.css" />
+    <link rel="stylesheet" href="assets/lib/aos/aos.css" />
+    <link rel="stylesheet" href="stylesheets/bulma-pricingtable.min.css" />
+    <link rel="stylesheet" href="assets/lib/photoswipe/photoswipe.css" />
+    <link
+      rel="stylesheet"
+      href="assets/lib/photoswipe/default-skin/default-skin.css"
+    />
     <link rel="stylesheet" href="assets/lib/photoswipe/photoswipe.css" />
     <script src="assets/lib/photoswipe/photoswipe.min.js"></script>
     <script src="assets/lib/photoswipe/photoswipe-ui-default.js"></script>
 
-    <link rel="stylesheet" href="stylesheets/main.css">
+    <link rel="stylesheet" href="stylesheets/main.css" />
     <title>SpectorWare - Computers</title>
     <link rel="icon" href="assets/images/logos/logo.svg" />
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-</head>
+  </head>
 
-<body>
-    <nav class="navbar is-fixed-top bg-light" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="clickable-item" href="/"
-                style="position: absolute; left: 50%; margin-left: -100px; margin-top: 0px; padding: 0; display: flex; align-items: center;">
-                <img src="assets/images/logos/logo.svg" width="48" height="48">
-            </a>
+  <body>
+    <nav
+      class="navbar is-fixed-top bg-light"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a
+          class="clickable-item"
+          href="/"
+          style="
+            position: absolute;
+            left: 50%;
+            margin-left: -100px;
+            margin-top: 0px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+          "
+        >
+          <img src="assets/images/logos/logo.svg" width="48" height="48" />
+        </a>
 
-            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-                data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
+        <a
+          role="button"
+          class="navbar-burger burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <div class="toggle-container v-center">
+            <label class="switch"
+              ><input type="checkbox" id="switch" name="theme" />
+              <div class="slider round">
+                <span class="on">Dark</span><span class="off">Light</span>
+              </div>
+            </label>
+          </div>
         </div>
 
+        <div class="navbar-end">
+          <a class="navbar-item clickable-item" href="index.html"> Home </a>
 
+          <a class="navbar-item clickable-item" href="domains.html">
+            Domains
+          </a>
+          <a class="navbar-item clickable-item" href="hosting.html">
+            Hosting
+          </a>
 
+          <div class="navbar-item has-dropdown is-hoverable current">
+            <a class="navbar-link clickable-item"> More </a>
 
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                <div class="toggle-container v-center">
-                    <label class="switch"><input type="checkbox" id="switch" name="theme">
-                        <div class="slider round">
-                            <span class="on">Dark</span><span class="off">Light</span>
-
-                        </div>
-                    </label>
-
-                </div>
+            <div class="navbar-dropdown">
+              <a class="navbar-item clickable-item" href="development.html">
+                Branding and Development
+              </a>
+              <a class="navbar-item clickable-item" href="pc.html">
+                Build a PC
+              </a>
             </div>
+          </div>
 
-            <div class="navbar-end">
-                <a class="navbar-item clickable-item" href="index.html">
-                    Home
-                </a>
-
-                <a class="navbar-item clickable-item" href="domains.html">
-                    Domains
-                </a>
-                <a class="navbar-item clickable-item" href="hosting.html">
-                    Hosting
-                </a>
-
-                <div class="navbar-item has-dropdown is-hoverable current">
-                    <a class="navbar-link clickable-item">
-                        More
-                    </a>
-
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item clickable-item" href="development.html">
-                            Branding and Development
-                        </a>
-                        <a class="navbar-item clickable-item" href="pc.html">
-                            Build a PC
-                        </a>
-
-                    </div>
-                </div>
-
-                <a class="navbar-item clickable-item" href="https://spectorware.com/whmcs">
-                    Client Area
-                </a>
-                <a class="navbar-item clickable-item" href="contact.html">
-                    Contact
-                </a>
-            </div>
+          <a
+            class="navbar-item clickable-item"
+            href="https://spectorware.com/whmcs"
+          >
+            Client Area
+          </a>
+          <a class="navbar-item clickable-item" href="contact.html">
+            Contact
+          </a>
         </div>
+      </div>
     </nav>
-    <button id="back-to-top-btn clickable-item"><i class="fas fa-angle-double-up clickable-item"></i></button>
+    <button id="back-to-top-btn clickable-item">
+      <i class="fas fa-angle-double-up clickable-item"></i>
+    </button>
     <div class="chat-widget">
-        <div class="floating-chat">
-            <i class="fas fa-comments" aria-hidden="true"></i>
-            <div class="chat">
-                <div class="chat-header">
-                    <span class="titles" style="color: #da4357; font-weight: bold; text-transform: uppercase;">Leave us
-                        a message</span>
-                    <button class="delete" style="float: right;"></button>
-                </div>
-                <div class="chat-body">
-                    <div class="field">
-                        <p class="control has-icons-left has-icons-right">
-                            <input class="input" id="nameText" type="text" placeholder="Name">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-user"></i>
-                            </span>
-                    </div>
-                    <div class="field">
-                        <p class="control has-icons-left has-icons-right">
-                            <input class="input" id="emailText" type="email" placeholder="Email">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-envelope"></i>
-                            </span>
-
-                    </div>
-                    <div class="field">
-                        <p class="control has-icons-left has-icons-right">
-                            <input class="input" id="subjectText" type="name" placeholder="Subject">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-heading"></i>
-                            </span>
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            <textarea class="textarea has-fixed-size" id="messageText" placeholder="Message"></textarea>
-                        </div>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="chat-footer" style="align-items: center;">
-                        <button class="button is-primary" style="width: 100%;">Send</button>
-                    </div>
-                </div>
-
+      <div class="floating-chat">
+        <i class="fas fa-comments" aria-hidden="true"></i>
+        <div class="chat">
+          <div class="chat-header">
+            <span
+              class="titles"
+              style="
+                color: #da4357;
+                font-weight: bold;
+                text-transform: uppercase;
+              "
+              >Leave us a message</span
+            >
+            <button class="delete" style="float: right"></button>
+          </div>
+          <div class="chat-body">
+            <div class="field">
+              <p class="control has-icons-left has-icons-right">
+                <input
+                  class="input"
+                  id="nameText"
+                  type="text"
+                  placeholder="Name"
+                />
+                <span class="icon is-small is-left">
+                  <i class="fas fa-user"></i>
+                </span>
+              </p>
             </div>
+
+            <div class="field">
+              <p class="control has-icons-left has-icons-right">
+                <input
+                  class="input"
+                  id="emailText"
+                  type="email"
+                  placeholder="Email"
+                />
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </p>
+            </div>
+
+            <div class="field">
+              <p class="control has-icons-left has-icons-right">
+                <input
+                  class="input"
+                  id="subjectText"
+                  type="name"
+                  placeholder="Subject"
+                />
+                <span class="icon is-small is-left">
+                  <i class="fas fa-heading"></i>
+                </span>
+              </p>
+            </div>
+
+            <div class="field">
+              <div class="control">
+                <textarea
+                  class="textarea has-fixed-size"
+                  id="messageText"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <div class="chat-footer" style="align-items: center">
+              <button class="button is-primary" style="width: 100%">
+                Send
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <section class="development-section">
-        <br>
-        <div class="container">
-            <h1 class="section-title is-size-1">Let's build your next computer</h1>
-            <p class="subtitle has-text-centered">We understand how inconvenient it may be to have to have many stops in
-                trying to get your product running. We want to provide a one stop shop for you where you can find the
-                core elements of
-                getting your project running on the digital platform.</p>
-            <br>
-
-        </div>
-        <br>
+      <br />
+      <div class="container">
+        <h1 class="section-title is-size-1">Let's build your next computer</h1>
+        <p class="subtitle has-text-centered">
+         Have a look at some of the machines that the team has put together. Need something more office oriented? No problem. We've got those too. Get in touch with us and we'll take care of the rest.
+        </p>
+        <br />
+      </div>
+      <br />
     </section>
     <section class="gallery-section">
+      <div class="container">
         <div class="container">
-            <div class="container">
-                <div class="columns">
-                    <div class="column">
-                        <h1 class="text-center">
-                            Iceland<br>
-                            <small><em>a PhotoSwipe Demo</em></small>
-                        </h1>
+          <div class="columns">
+            <div class="column">
+              <h1 class="text-center">
+                SpectorWare<br />
+                <small><em>Computer Builds</em></small>
+              </h1>
 
-                        <!-- Galley wrapper that contains all items -->
-                        <div id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
+              <!-- Galley wrapper that contains all items -->
+              <div
+                id="gallery"
+                class="gallery"
+                itemscope
+                itemtype="http://schema.org/ImageGallery"
+              >
+                <!-- Use figure for a more semantic html -->
+                <figure
+                  itemprop="associatedMedia"
+                  itemscope
+                  itemtype="http://schema.org/ImageObject"
+                >
+                  <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
+                  <a
+                    href="assets/images/builds/ms-p-3.jpeg"
+                    data-caption="© SpectorWare"
+                    data-width="1200"
+                    data-height="900"
+                    itemprop="contentUrl"
+                  >
+                    <!-- Thumbnail -->
+                    <img
+                      src="assets/images/builds/ms-p-3.jpeg"
+                      itemprop="thumbnail"
+                      alt="Image description"
+                    />
+                  </a>
+                </figure>
 
-                            <!-- Use figure for a more semantic html -->
-                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-                                <a href="assets/images/builds/ms-p-3.jpeg"
-                                    data-caption="Sea side, south shore<br><em class='text-muted'>© Dominik Schröder</em>"
-                                    data-width="1200" data-height="900" itemprop="contentUrl">
-                                    <!-- Thumbnail -->
-                                    <img src="assets/images/builds/ms-p-3.jpeg" itemprop="thumbnail"
-                                        alt="Image description">
-                                </a>
-                            </figure>
+                <figure
+                  itemprop="associatedMedia"
+                  itemscope
+                  itemtype="http://schema.org/ImageObject"
+                >
+                  <a
+                    href="assets/images/builds/ms-p-2.jpeg"
+                    data-caption="© SpectorWare"
+                    data-width="1200"
+                    data-height="900"
+                    itemprop="contentUrl"
+                  >
+                    <img
+                      src="assets/images/builds/ms-p-2.jpeg"
+                      itemprop="thumbnail"
+                      alt="Image description"
+                    />
+                  </a>
+                </figure>
+                <figure
+                  itemprop="associatedMedia"
+                  itemscope
+                  itemtype="http://schema.org/ImageObject"
+                >
+                  <a
+                    href="assets/images/builds/ms-p-5.jpeg"
+                    data-caption="© SpectorWare"
+                    data-width="1200"
+                    data-height="900"
+                    itemprop="contentUrl"
+                  >
+                    <img
+                      src="assets/images/builds/ms-p-5.jpeg"
+                      itemprop="thumbnail"
+                      alt="Image description"
+                    />
+                  </a>
+                </figure>
+                <!-- Some spacing 😉 -->
+                <div class="spacer"></div>
+                <figure
+                  itemprop="associatedMedia"
+                  itemscope
+                  itemtype="http://schema.org/ImageObject"
+                >
+                  <a
+                    href="assets/images/builds/ms-p-6.jpeg"
+                    data-caption="© SpectorWare"
+                    data-width="1200"
+                    data-height="900"
+                    itemprop="contentUrl"
+                  >
+                    <img
+                      src="assets/images/builds/ms-p-6.jpeg"
+                      itemprop="thumbnail"
+                      alt="Image description"
+                    />
+                  </a>
+                </figure>
+                <figure
+                  itemprop="associatedMedia"
+                  itemscope
+                  itemtype="http://schema.org/ImageObject"
+                >
+                  <a
+                    href="assets/images/builds/ms-p-9.jpeg"
+                    data-caption="© SpectorWare"
+                    data-width="1200"
+                    data-height="900"
+                    itemprop="contentUrl"
+                  >
+                    <img
+                      src="assets/images/builds/ms-p-9.jpeg"
+                      itemprop="thumbnail"
+                      alt="Image description"
+                    />
+                  </a>
+                </figure>
+                <figure
+                  itemprop="associatedMedia"
+                  itemscope
+                  itemtype="http://schema.org/ImageObject"
+                >
+                  <a
+                    href="assets/images/builds/ms-p-4.jpeg"
+                    data-caption="© SpectorWare"
+                    data-width="1200"
+                    data-height="900"
+                    itemprop="contentUrl"
+                  >
+                    <img
+                      src="assets/images/builds/ms-p-4.jpeg"
+                      itemprop="thumbnail"
+                      alt="Image description"
+                    />
+                  </a>
+                </figure>
 
-                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="assets/images/builds/ms-p-2.jpeg"
-                                    data-caption="Sunset in the wheat field<br><em class='text-muted'>© Jordan McQueen</em>"
-                                    data-width="1200" data-height="900" itemprop="contentUrl">
-                                    <img src="assets/images/builds/ms-p-2.jpeg" itemprop="thumbnail"
-                                        alt="Image description">
-                                </a>
-                            </figure>
-                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="assets/images/builds/ms-p-5.jpeg"
-                                    data-caption="Mysterious ocean<br><em class='text-muted'>© Barn Images</em>"
-                                    data-width="1200" data-height="900" itemprop="contentUrl">
-                                    <img src="assets/images/builds/ms-p-5.jpeg" itemprop="thumbnail"
-                                        alt="Image description">
-                                </a>
-                            </figure>
-                            <!-- Some spacing 😉 -->
-                            <div class="spacer"></div>
-                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="assets/images/builds/ms-p-6.jpeg"
-                                    data-caption="Cloud over the mountains<br><em class='text-muted'>© James Pritchett</em>"
-                                    data-width="1200" data-height="900" itemprop="contentUrl">
-                                    <img src="assets/images/builds/ms-p-6.jpeg" itemprop="thumbnail"
-                                        alt="Image description">
-                                </a>
-                            </figure>
-                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="assets/images/builds/ms-p-9.jpeg"
-                                    data-caption="Icelandic horses<br><em class='text-muted'>© Bethany Legg</em>"
-                                    data-width="1200" data-height="900" itemprop="contentUrl">
-                                    <img src="assets/images/builds/ms-p-9.jpeg" itemprop="thumbnail"
-                                        alt="Image description">
-                                </a>
-                            </figure>
-                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="assets/images/builds/ms-p-4.jpeg"
-                                    data-caption="Sea side, south shore<br><em class='text-muted'>© Julien Lavallée</em>"
-                                    data-width="1200" data-height="900" itemprop="contentUrl">
-                                    <img src="assets/images/builds/ms-p-4.jpeg" itemprop="thumbnail"
-                                        alt="Image description">
-                                </a>
-                            </figure>
-
-                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="assets/images/builds/ms-p-8.jpeg"
-                                    data-caption="Seljalandsfoss waterfall<br><em class='text-muted'>© Jeff Sheldon</em>"
-                                    data-width="1200" data-height="900" itemprop="contentUrl">
-                                    <img src="assets/images/builds/ms-p-8.jpeg" itemprop="thumbnail"
-                                        alt="Image description">
-                                </a>
-                            </figure>
-                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="assets/images/builds/ms-p-1.jpeg"
-                                    data-caption="Sunset on the highland road<br><em class='text-muted'>© Forrest Cavale</em>"
-                                    data-width="1200" data-height="900" itemprop="contentUrl">
-                                    <img src="assets/images/builds/ms-p-1.jpeg" itemprop="thumbnail"
-                                        alt="Image description">
-                                </a>
-                            </figure>
-                            <!--      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <figure
+                  itemprop="associatedMedia"
+                  itemscope
+                  itemtype="http://schema.org/ImageObject"
+                >
+                  <a
+                    href="assets/images/builds/ms-p-8.jpeg"
+                    data-caption="© SpectorWare"
+                    data-width="1200"
+                    data-height="900"
+                    itemprop="contentUrl"
+                  >
+                    <img
+                      src="assets/images/builds/ms-p-8.jpeg"
+                      itemprop="thumbnail"
+                      alt="Image description"
+                    />
+                  </a>
+                </figure>
+                <figure
+                  itemprop="associatedMedia"
+                  itemscope
+                  itemtype="http://schema.org/ImageObject"
+                >
+                  <a
+                    href="assets/images/builds/ms-p-1.jpeg"
+                    data-caption="© SpectorWare"
+                    data-width="1200"
+                    data-height="900"
+                    itemprop="contentUrl"
+                  >
+                    <img
+                      src="assets/images/builds/ms-p-1.jpeg"
+                      itemprop="thumbnail"
+                      alt="Image description"
+                    />
+                  </a>
+                </figure>
+                <!--      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                                 <a href="https://unsplash.it/1200/900/?image=515"
                                     data-caption="Eerie wreckage of a crashed U.S. Navy aircraft<br><em class='text-muted'>© Jeff Sheldon</em>"
                                     data-width="1200" data-height="900" itemprop="contentUrl">
@@ -261,188 +401,214 @@
                                         alt="Image description">
                                 </a>
                             </figure> -->
-                        </div>
-
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+        </div>
 
-            <!-- Some spacing 😉 -->
-            <div class="spacer"></div>
+        <!-- Some spacing 😉 -->
+        <div class="spacer"></div>
 
-
-            <!-- Root element of PhotoSwipe. Must have class pswp. -->
-            <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-                <!-- Background of PhotoSwipe. 
+        <!-- Root element of PhotoSwipe. Must have class pswp. -->
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+          <!-- Background of PhotoSwipe. 
                  It's a separate element as animating opacity is faster than rgba(). -->
-                <div class="pswp__bg"></div>
-                <!-- Slides wrapper with overflow:hidden. -->
-                <div class="pswp__scroll-wrap">
-                    <!-- Container that holds slides. 
+          <div class="pswp__bg"></div>
+          <!-- Slides wrapper with overflow:hidden. -->
+          <div class="pswp__scroll-wrap">
+            <!-- Container that holds slides. 
                     PhotoSwipe keeps only 3 of them in the DOM to save memory.
                     Don't modify these 3 pswp__item elements, data is added later on. -->
-                    <div class="pswp__container">
-                        <div class="pswp__item"></div>
-                        <div class="pswp__item"></div>
-                        <div class="pswp__item"></div>
-                    </div>
-                    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-                    <div class="pswp__ui pswp__ui--hidden">
-                        <div class="pswp__top-bar">
-                            <!--  Controls are self-explanatory. Order can be changed. -->
-                            <div class="pswp__counter"></div>
-                            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                            <button class="pswp__button pswp__button--share" title="Share"></button>
-                            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                            <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
-                            <!-- element will get class pswp__preloader--active when preloader is running -->
-                            <div class="pswp__preloader">
-                                <div class="pswp__preloader__icn">
-                                    <div class="pswp__preloader__cut">
-                                        <div class="pswp__preloader__donut"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                            <div class="pswp__share-tooltip"></div>
-                        </div>
-                        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-                        </button>
-                        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-                        </button>
-                        <div class="pswp__caption">
-                            <div class="pswp__caption__center"></div>
-                        </div>
-                    </div>
-                </div>
+            <div class="pswp__container">
+              <div class="pswp__item"></div>
+              <div class="pswp__item"></div>
+              <div class="pswp__item"></div>
             </div>
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+              <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button
+                  class="pswp__button pswp__button--close"
+                  title="Close (Esc)"
+                ></button>
+                <button
+                  class="pswp__button pswp__button--share"
+                  title="Share"
+                ></button>
+                <button
+                  class="pswp__button pswp__button--fs"
+                  title="Toggle fullscreen"
+                ></button>
+                <button
+                  class="pswp__button pswp__button--zoom"
+                  title="Zoom in/out"
+                ></button>
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                  <div class="pswp__preloader__icn">
+                    <div class="pswp__preloader__cut">
+                      <div class="pswp__preloader__donut"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
+              >
+                <div class="pswp__share-tooltip"></div>
+              </div>
+              <button
+                class="pswp__button pswp__button--arrow--left"
+                title="Previous (arrow left)"
+              ></button>
+              <button
+                class="pswp__button pswp__button--arrow--right"
+                title="Next (arrow right)"
+              ></button>
+              <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <section>
-        <footer class="footer">
-
-            <div class="content has-text-centered">
-                <div class="container">
-                    <div class="columns" style="text-align: left;">
-                        <div class="column">
-                            <strong>SpectorWare</strong>
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                            </ul>
-                        </div>
-                        <div class="column">
-                            <strong>Web Services</strong>
-                            <ul>
-                                <li><a href="domains.html">Domains</a></li>
-                                <li><a href="hosting.html">Web Hosting</a></li>
-                                <li><a href="https://spectorware.com/whmcs">Client Area</a></li>
-                                <li><a href="https://spectorware.com/whmcs/index.php?rp=/knowledgebase">FAQ</a></li>
-                            </ul>
-                        </div>
-                        <div class="column">
-                            <strong>Development</strong>
-                            <ul>
-                                <li><a href="development.html">Branding and Development</a></li>
-                                <li><a href="pc.html">Order PCs</a></li>
-                            </ul>
-                        </div>
-                        <div class="column">
-                            <strong>Need help?</strong>
-                            <ul>
-                                <li><a href="contact.html">Contact</a></li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <p>
-                    Copyright &copy;
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script>
-                    <strong>SpectorWare</strong> All rights reserved.
-                </p>
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <div class="container">
+            <div class="columns" style="text-align: left">
+              <div class="column">
+                <strong>SpectorWare</strong>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <strong>Web Services</strong>
+                <ul>
+                  <li><a href="domains.html">Domains</a></li>
+                  <li><a href="hosting.html">Web Hosting</a></li>
+                  <li>
+                    <a href="https://spectorware.com/whmcs">Client Area</a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://spectorware.com/whmcs/index.php?rp=/knowledgebase"
+                      >FAQ</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="column">
+                <strong>Development</strong>
+                <ul>
+                  <li>
+                    <a href="development.html">Branding and Development</a>
+                  </li>
+                  <li><a href="pc.html">Order PCs</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <strong>Need help?</strong>
+                <ul>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
             </div>
-        </footer>
+          </div>
+          <br />
+          <p>
+            Copyright &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            <strong>SpectorWare</strong> All rights reserved.
+          </p>
+        </div>
+      </footer>
     </section>
 
-
     <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    ></script>
     <!-- Theme toggle-->
     <script type="text/javascript" src="js/theme-toggle.js"></script>
     <!----BulmaJS--->
     <script src="js/bulma.js"></script>
     <!-- Change Navbar bg on scroll -->
     <script>
-        $(window).scroll(function () {
-            $("nav").toggleClass("scrolled", $(this).scrollTop() > 90);
-        });
+      $(window).scroll(function () {
+        $("nav").toggleClass("scrolled", $(this).scrollTop() > 90);
+      });
     </script>
-    <!-- Back to top on scroll -->
-    <script src="js/backtotopscroll.js"></script>
     <script src="assets/lib/aos/aos.js"></script>
     <script>
-        AOS.init();
+      AOS.init();
     </script>
     <script>
-        function searchForDomain() {
-            var url = document.getElementById('domainName').value;
-            window.open("https://spectorware.com/whmcs/cart.php?a=add&domain=register&query=" + url);
-        }   
+      function searchForDomain() {
+        var url = document.getElementById("domainName").value;
+        window.open(
+          "https://spectorware.com/whmcs/cart.php?a=add&domain=register&query=" +
+            url
+        );
+      }
     </script>
     <script>
-        'use strict';
+      "use strict";
 
-        /* global jQuery, PhotoSwipe, PhotoSwipeUI_Default, console */
+      /* global jQuery, PhotoSwipe, PhotoSwipeUI_Default, console */
 
-        (function ($) {
+      (function ($) {
+        // Init empty gallery array
+        var container = [];
 
-            // Init empty gallery array
-            var container = [];
+        // Loop over gallery items and push it to the array
+        $("#gallery")
+          .find("figure")
+          .each(function () {
+            var $link = $(this).find("a"),
+              item = {
+                src: $link.attr("href"),
+                w: $link.data("width"),
+                h: $link.data("height"),
+                title: $link.data("caption"),
+              };
+            container.push(item);
+          });
 
-            // Loop over gallery items and push it to the array
-            $('#gallery').find('figure').each(function () {
-                var $link = $(this).find('a'),
-                    item = {
-                        src: $link.attr('href'),
-                        w: $link.data('width'),
-                        h: $link.data('height'),
-                        title: $link.data('caption')
-                    };
-                container.push(item);
-            });
+        // Define click event on gallery item
+        $("a").click(function (event) {
+          if (!$(this).hasClass("clickable-item")) {
+            event.preventDefault();
+          }
+          // Prevent location change
 
+          // Define object and gallery options
+          var $pswp = $(".pswp")[0],
+            options = {
+              index: $(this).parent("figure").index(),
+              bgOpacity: 0.85,
+              showHideOpacity: true,
+            };
 
-            // Define click event on gallery item
-            $('a').click(function (event) {
-                if (!$(this).hasClass('clickable-item')) {
-                    event.preventDefault();
-                }
-                // Prevent location change
-
-
-                // Define object and gallery options
-                var $pswp = $('.pswp')[0],
-                    options = {
-                        index: $(this).parent('figure').index(),
-                        bgOpacity: 0.85,
-                        showHideOpacity: true
-                    };
-
-                // Initialize PhotoSwipe
-                var gallery = new PhotoSwipe($pswp, PhotoSwipeUI_Default, container, options);
-                gallery.init();
-            });
-
-        }(jQuery));
-
+          // Initialize PhotoSwipe
+          var gallery = new PhotoSwipe(
+            $pswp,
+            PhotoSwipeUI_Default,
+            container,
+            options
+          );
+          gallery.init();
+        });
+      })(jQuery);
     </script>
     <script src="js/floatingchat.js"></script>
-
-</body>
-
+  </body>
 </html>
